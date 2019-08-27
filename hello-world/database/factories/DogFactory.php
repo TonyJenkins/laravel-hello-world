@@ -16,7 +16,7 @@ $factory -> define (Dog::class, function (Faker $faker) {
     return [
 
         'name' => $faker -> firstName,
-        'breed' => 'foo',
+        'breed' => $breeds [array_rand ($breeds)],
         'score' => $faker ->  numberBetween (0, 10),
 
     ];
